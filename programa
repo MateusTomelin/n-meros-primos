@@ -1,0 +1,33 @@
+algoritmo "Soma de Números Primos até N"
+var
+   N, numero, soma: inteiro
+   divisores, i: inteiro
+
+inicio
+   // Entrada: Ler um número N
+   escreva("Digite um número N: ")
+   leia(N)
+
+   // Inicializar a variável de soma
+   soma := 0
+
+   // Calcular a soma de números primos até N
+   para numero de 2 ate N faca
+      divisores := 0
+
+      // Verificar se o número é primo
+      para i de 2 ate numero-1 faca
+         se numero mod i = 0 entao
+            divisores := divisores + 1
+         fimse
+      fimpara
+
+      // Se não houver divisores, o número é primo
+      se divisores = 0 entao
+         soma := soma + numero
+      fimse
+   fimpara
+
+   // Saída: Imprimir a soma
+   escreva("A soma dos números primos até ", N, " é: ", soma)
+fimalgoritmo
